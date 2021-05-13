@@ -4,7 +4,7 @@ public:
         map<int, int> m;
         for(int i=0; i<nums.size(); i++) {
             const int comp = target - nums[i];
-            if (m.count(comp) > 0) {
+            if (m.count(comp) == 1) {
                 return vector<int> {i, m[comp]};
             }
             m[nums[i]] = i;
